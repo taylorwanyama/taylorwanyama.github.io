@@ -910,25 +910,26 @@
 
         @media (max-width: 768px) {
             .dashboard {
-                display: none;
+                left: 1rem;
+                top: 5rem;
+                transform: none;
+                padding: 0.8rem 0.6rem;
+            }
+
+            .dashboard-item {
+                margin: 1rem 0;
+            }
+
+            .dashboard-item i {
+                font-size: 1.5rem;
+            }
+
+            .dashboard-item span {
+                font-size: 0.65rem;
             }
 
             .mobile-dashboard-toggle {
-                display: block;
-            }
-
-            .dashboard.mobile-active {
-                display: flex;
-                flex-direction: row;
-                left: 50%;
-                transform: translateX(-50%);
-                bottom: 6rem;
-                top: auto;
-                padding: 1rem 1.5rem;
-            }
-
-            .dashboard.mobile-active .dashboard-item {
-                margin: 0 1rem;
+                display: none;
             }
 
             .hero-text h1 {
@@ -1462,7 +1463,9 @@
                         <a href="mailto:wanyamataylor64@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                         <a href="https://wa.me/254794272400" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://upwork.com/freelancers/~01bfec2b5bbc176fa0?mp_source=share" target="_blank" title="Upwork">
-                            <img src="Logo.png" alt="Upwork" style="width: 24px; height: 24px;">
+                            <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;">
+                                <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
+                            </svg>
                         </a>
                        
                     </div>
