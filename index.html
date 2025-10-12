@@ -910,26 +910,26 @@
 
         @media (max-width: 768px) {
             .dashboard {
-                left: 1rem;
-                top: 5rem;
-                transform: none;
-                padding: 0.8rem 0.6rem;
-            }
-
-            .dashboard-item {
-                margin: 1rem 0;
-            }
-
-            .dashboard-item i {
-                font-size: 1.5rem;
-            }
-
-            .dashboard-item span {
-                font-size: 0.65rem;
+                display: none;
             }
 
             .mobile-dashboard-toggle {
-                display: none;
+                display: block;
+            }
+
+            .dashboard.mobile-active {
+                display: flex;
+                flex-direction: column;  /* Changed from row to column */
+                left: 1rem;              /* Changed from 50% to 1rem */
+                transform: none;         /* Changed from translateX(-50%) */
+                top: 5rem;               /* Changed from bottom: 6rem */
+                bottom: auto;
+                padding: 0.8rem 0.6rem;
+                max-width: 80px;
+            }
+
+            .dashboard.mobile-active .dashboard-item {
+                margin: 1rem 0;          /* Changed from 0 1rem */
             }
 
             .hero-text h1 {
