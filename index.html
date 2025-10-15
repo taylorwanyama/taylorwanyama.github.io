@@ -414,6 +414,154 @@
                 radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.05) 2px, transparent 2px);
             background-size: 60px 60px, 90px 90px;
         }
+        /* Services Section */
+        #services {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+                radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.05) 3px, transparent 3px);
+            background-size: 50px 50px, 80px 80px, 100px 100px;
+        }
+
+        #services h2 {
+            color: white;
+        }
+
+        #services h2::after {
+            background: white;
+        }
+
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 1.8rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent-cyan), rgba(255, 255, 255, 0.5));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+         .service-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .service-subtitle {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .service-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .service-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.8rem;
+            position: relative;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .service-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .service-list li strong {
+            color: white;
+            font-weight: 600;
+        }
 
         .education-content {
             max-width: 1000px;
@@ -995,6 +1143,11 @@
             <span>Education</span>
             <div class="dashboard-tooltip">Education</div>
         </a>
+        <a href="#services" class="dashboard-item" data-section="services">
+            <i class="fas fa-briefcase"></i>
+            <span>Services</span>
+            <div class="dashboard-tooltip">My Services</div>
+        </a>
         <a href="#projects" class="dashboard-item" data-section="projects">
             <i class="fas fa-project-diagram"></i>
             <span>Projects</span>
@@ -1140,6 +1293,62 @@
             </div>
         </div>
     </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services I Offer</h2>
+        
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Data Foundation & Engineering</h3>
+                <ul class="service-list">
+                    <li><strong>ETL Pipelines:</strong> Automate data extraction, transformation, and loading processes for seamless data flow</li>
+                    <li><strong>Data Warehousing:</strong> Design scalable data storage solutions optimized for analytics and reporting</li>
+                    <li><strong>Web Scraping:</strong> Extract valuable data from websites using advanced scraping techniques</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-broom"></i>
+                </div>
+                <h3>Core Data Preparation & Exploration</h3>
+                <ul class="service-list">
+                    <li><strong>Exploratory Data Analysis:</strong> Deep dive into your data to discover patterns, trends, and anomalies</li>
+                    <li><strong>Data Preprocessing:</strong> Clean, normalize, and prepare data for modeling with industry best practices</li>
+                    <li><strong>Data Analysis:</strong> Statistical analysis and hypothesis testing to extract actionable insights</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Advanced AI Development & Modeling</h3>
+                <ul class="service-list">
+                    <li><strong>Model Development & Deployment:</strong> Build and deploy production-ready Machine Learning and Deep Learning models with monitoring and maintenance</li>
+                    <li><strong>RAG Development:</strong> Create intelligent retrieval-augmented generation systems for enterprise knowledge bases</li>
+                    <li><strong>Time Series Analysis:</strong> Forecast trends and patterns for inventory, sales, financial planning, and more</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Visualization & Reporting</h3>
+                <ul class="service-list">
+                    <li><strong>Dashboard Creation:</strong> Build interactive, real-time dashboards using Tableau, Plotly.</li>
+                    <li><strong>Interactive Visualizations:</strong> Design engaging charts and graphs that make data exploration intuitive</li>
+                    <li><strong>Business Intelligence Reports:</strong> Deliver automated reports that keep stakeholders informed and aligned</li>
+                </ul>
+            </div>
+        </div>
+    </section> 
 
     <!-- Projects Section -->
     <section id="projects">
